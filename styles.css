@@ -1,0 +1,188 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.profile {
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.navigation ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navigation ul li {
+  float: left;
+}
+
+.navigation ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigation ul li a:hover, .nav-link.active {
+  background-color: #111;
+}
+
+.nav-link.active {
+  background-color: #111;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.project-preview {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* This will ensure the image covers the set area */
+  max-height: 300px; /* Adjust as needed */
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project-meta {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.project-content {
+  padding: 0 20px;
+}
+
+.project-preview-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 10px;
+  height: 150px; /* Set a constant height for the preview box */
+}
+
+.project-preview-block img {
+  max-height: 100%; /* Image height is limited by the box height */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures that the aspect ratio is maintained while filling the height */
+  margin-left: 20px; /* Add some space between the text and the image */
+}
+
+.project-preview-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  overflow: hidden; /* Prevents text from overflowing the container */
+}
+
+.project-preview-block:hover {
+  background-color: #f0f0f0; /* Adds a hover effect */
+}
+
+.project-preview-block h3 {
+  margin: 10px 0;
+}
+
+.project-preview-block p {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #e1e1e1;
+}
+
+.contact-information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allows the items to wrap onto the next line on small screens */
+  gap: 10px; /* Spacing between items */
+}
+
+.contact-information a {
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-information a:hover {
+  text-decoration: underline;
+}
+
+.navigation-link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
+
+.home-button {
+  display: inline-block;
+  background-color: #f2f2f2;
+  color: #333;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.home-button:hover {
+  background-color: #e1e1e1;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 600px) {
+  .navigation ul li {
+    float: none;
+  }
+}
+
+@media (max-width: 300px) {
+  .project-preview-block {
+    flex-direction: column;
+    height: auto; /* Allow the box to grow in height on small screens */
+  }
+
+  .project-preview-block img {
+    width: 100%; /* Full width on small screens */
+    max-height: none;
+    height: auto; /* Height is set automatically */
+    margin-top: 10px; /* Add some space between the text and the image */
+    object-fit: scale-down; /* Prevent the image from being cut off */
+  }
+  .footer {
+    padding: 10px;
+  }
+  .contact-information a::after {
+    content: none;
+  }
+}

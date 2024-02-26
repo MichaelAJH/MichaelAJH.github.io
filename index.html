@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Website</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+<div class="profile">
+  <img src="profile.png" alt="Profile Image" class="profile-image">
+  <h1>Michael Junhyuk Ahn</h1>
+  <p>Your Profession</p>
+</div>
+
+<nav class="navigation">
+  <ul>
+    <li><a href="javascript:void(0);" class="nav-link" onclick="openTab(event, 'projects')">My Projects</a></li>
+    <li><a href="javascript:void(0);" class="nav-link" onclick="openTab(event, 'blog')">Blog</a></li>
+    <li><a href="javascript:void(0);" class="nav-link" onclick="openTab(event, 'research')">Research</a></li>
+  </ul>
+</nav>
+
+<div id="projects" class="tab-content">
+  <h2>My Projects</h2>
+  <!-- Add your projects here -->
+  <div id="project-previews"></div>
+</div>
+
+<div id="blog" class="tab-content">
+  <h2>Blog</h2>
+  <!-- Add blog posts here -->
+</div>
+
+<div id="research" class="tab-content">
+  <h2>Research</h2>
+  <!-- Add research articles here -->
+</div>
+
+<footer class="footer">
+  <div class="contact-information">
+    <a href="mailto:jh.ahn.michael@gmail.com">Email</a> |
+    <a href="https://github.com/MichaelAJH" target="_blank">GitHub</a>
+    <!-- <a href="https://instagram.com/your-instagram-id" target="_blank">Instagram</a> |
+    <a href="https://facebook.com/your-facebook-id" target="_blank">Facebook</a> -->
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
